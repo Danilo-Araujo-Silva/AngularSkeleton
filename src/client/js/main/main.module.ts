@@ -15,10 +15,10 @@ import { NavComponent } from './nav/nav.component';
   exports: [NavComponent,
     CommonModule, FormsModule, RouterModule]
 })
-export class SharedModule {
+export class MainModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SharedModule,
+      ngModule: MainModule,
       providers: []
     };
   }
