@@ -16,7 +16,11 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
 
   JS_SRC = `${this.APP_SRC}/js`;
 
+  FONTS_SRC :any = [];
+
   VENDOR_SRC = `${this.APP_SRC}/vendor`;
+
+  FONTS_DEST = `${this.APP_DEST}/fonts`;
 
   constructor() {
     super();
@@ -167,7 +171,5 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
     ];
     
     this.addPackagesBundles(additionalPackages);
-
-    console.log(this.SYSTEM_CONFIG);
   }
 }
