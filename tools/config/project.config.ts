@@ -16,6 +16,8 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
 
   JS_SRC = `${this.APP_SRC}/js`;
 
+  VENDOR_SRC = `${this.APP_SRC}/vendor`;
+
   constructor() {
     super();
 
@@ -43,7 +45,7 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
 
     this.TYPED_COMPILE_INTERVAL = this.TYPED_COMPILE_INTERVAL;
 
-    this.BOOTSTRAP_DIR = argv['app'] || 'js/angular';
+    this.BOOTSTRAP_DIR = 'js/angular';
 
     this.APP_CLIENT = this.APP_CLIENT;
 
@@ -122,24 +124,50 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
       // {src: `${this.APP_SRC}/your-path-to-lib/libs/jquery-ui.js`, inject: true, vendor: false}
       // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
       {src: `${this.CSS_SRC}/normalize.css`, inject: true, vendor: false},
+      {src: `${this.NPM_BASE}/primeng/resources/themes/omega/theme.css`, inject: true, vendor: true},
+      {src: `${this.VENDOR_SRC}/font-awesome/4.7.0/css/font-awesome.min.css`, inject: true, vendor: true},
+      {src: `${this.NPM_BASE}primeng/resources/primeng.min.css`, inject: true, vendor: true},
       {src: `${this.JS_SRC}/google-analytics/google-analytics.js`, inject: true, vendor: false},
     ];
 
-    // Add packages (e.g. ng2-translate)
-    // let additionalPackages: ExtendPackages[] = [{
-    //   name: 'ng2-translate',
-    //   // Path to the package's bundle
-    //   path: 'node_modules/ng2-translate/bundles/ng2-translate.umd.js'
-    // }];
-    //
-    // this.addPackagesBundles(additionalPackages);
+    this.TEMP_FILES = this.TEMP_FILES;
+
+    this.SYSTEM_CONFIG_DEV = this.SYSTEM_CONFIG_DEV;
+    this.SYSTEM_CONFIG.paths.primeng = 'npm:primeng';
+
+    this.SYSTEM_CONFIG = this.SYSTEM_CONFIG_DEV;
+
+    this.SYSTEM_BUILDER_CONFIG = this.SYSTEM_BUILDER_CONFIG;
+
+    this.BROWSER_LIST = this.BROWSER_LIST;
+
+    this.COLOR_GUARD_WHITE_LIST = this.COLOR_GUARD_WHITE_LIST;
 
     /* Add proxy middleware */
     // this.PROXY_MIDDLEWARE = [
     //   require('http-proxy-middleware')({ ws: false, target: 'http://localhost:3003' })
     // ];
+    this.PROXY_MIDDLEWARE = this.PROXY_MIDDLEWARE;
 
     /* Add to or override NPM module configurations: */
     // this.PLUGIN_CONFIGS['browser-sync'] = { ghostMode: false };
+    this.PLUGIN_CONFIGS = this.PLUGIN_CONFIGS;
+
+    // Add packages (e.g. ng2-translate)
+    let additionalPackages: ExtendPackages[] = [
+      // {
+      //   name: 'ng2-translate',
+      //   // Path to the package's bundle
+      //   path: 'node_modules/ng2-translate/bundles/ng2-translate.umd.js'
+      // },
+      {
+        name: 'primeng',
+        packageMeta: { defaultExtension: 'js' }
+      },
+    ];
+    
+    this.addPackagesBundles(additionalPackages);
+
+    console.log(this.SYSTEM_CONFIG);
   }
 }
