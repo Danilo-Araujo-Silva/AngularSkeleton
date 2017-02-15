@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import { MainModule } from './main/main.module';
+import { MainModule } from './../main/main.module';
 
 @NgModule({
   imports: [BrowserModule, HttpModule, AppRoutingModule, MainModule.forRoot()],
