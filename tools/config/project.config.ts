@@ -111,7 +111,7 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
 
     this.VERSION_NODE = this.VERSION_NODE;
 
-    this.ENABLE_SCSS = this.ENABLE_SCSS;
+    this.ENABLE_SCSS = true;
 
     this.FORCE_TSLINT_EMIT_ERROR = this.FORCE_TSLINT_EMIT_ERROR;
 
@@ -127,10 +127,6 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
       ...this.APP_ASSETS,
       // {src: `${this.APP_SRC}/your-path-to-lib/libs/jquery-ui.js`, inject: true, vendor: false}
       // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
-      {src: `${this.CSS_SRC}/normalize.css`, inject: true, vendor: false},
-      {src: `${this.NPM_BASE}/primeng/resources/themes/omega/theme.css`, inject: true, vendor: true},
-      {src: `${this.VENDOR_SRC}/font-awesome/4.7.0/css/font-awesome.min.css`, inject: true, vendor: true},
-      {src: `${this.NPM_BASE}primeng/resources/primeng.min.css`, inject: true, vendor: true},
       {src: `${this.JS_SRC}/google-analytics/google-analytics.js`, inject: true, vendor: false},
     ];
 
@@ -168,6 +164,10 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
         name: 'primeng',
         packageMeta: { defaultExtension: 'js' }
       },
+      {
+        name: '@angular/material',
+        path: 'node_modules/@angular/material/bundles/material.umd.js'
+      }
     ];
     
     this.addPackagesBundles(additionalPackages);
