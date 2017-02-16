@@ -11,7 +11,7 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 // The app module
 import { AppModule } from './components/app/app.module';
 
-import './../google-analytics/google-analytics.js';
+//import './../google-analytics/google-analytics.js';
 
 if (String('<%= BUILD_TYPE %>') === 'prod') { enableProdMode(); }
 
