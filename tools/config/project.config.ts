@@ -127,7 +127,6 @@ export class ProjectConfig extends SeedConfig.SeedConfig {
       ...this.APP_ASSETS,
       // {src: `${this.APP_SRC}/your-path-to-lib/libs/jquery-ui.js`, inject: true, vendor: false}
       // {src: `${this.CSS_SRC}/path-to-lib/test-lib.css`, inject: true, vendor: false},
-      {src: `${this.JS_SRC}/google-analytics/google-analytics.js`, inject: true, vendor: false},
     ];
 
     this.TEMP_FILES = this.TEMP_FILES;
