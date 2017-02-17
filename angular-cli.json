@@ -9,23 +9,28 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "assets",
-        "favicon.ico"
+        "font",
+        "image",
+        "other",
+        "browserconfig.xml",
+        "crossdomain.xml",
+        "humans.txt",
+        "robots.txt"
       ],
       "index": "index.html",
-      "main": "main.ts",
-      "polyfills": "polyfills.ts",
-      "test": "test.ts",
+      "main": "js/angular/main.ts",
+      "polyfills": "js/angular/configuration/polyfills.ts",
+      "test": "js/angular/test.ts",
       "tsconfig": "tsconfig.json",
-      "prefix": "app",
+      "prefix": "js",
       "styles": [
-        "styles.css"
+        "css/main.css"
       ],
       "scripts": [],
       "environments": {
-        "source": "environments/environment.ts",
-        "dev": "environments/environment.ts",
-        "prod": "environments/environment.prod.ts"
+        "source": "js/environments/default.ts",
+        "dev": "js/environments/default.ts",
+        "prod": "js/environments/prod.ts"
       }
     }
   ],
