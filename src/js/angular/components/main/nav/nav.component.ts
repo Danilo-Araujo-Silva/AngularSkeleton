@@ -7,6 +7,6 @@ import { Component } from '@angular/core';
   moduleId: module.id,
   selector: 'nav',
   templateUrl: 'nav.component.html',
-  styleUrls: ['nav.component.css'],
+  styleUrls: ['nav.component.scss'],
 })
 export class NavComponent { }

@@ -3,25 +3,25 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import 'hammerjs/hammer';
+
 import { MaterialModule } from '@angular/material';
 import {CalendarModule} from 'primeng/primeng';
 
-import { AppComponent } from './app.component';
-import { MainModule } from './../main/main.module';
+import { TestComponent } from './test.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    MainModule.forRoot(),
     CalendarModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [TestComponent]
 })
-export class AppModule { }
+export class TestModule { }
