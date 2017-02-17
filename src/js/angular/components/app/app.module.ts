@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import 'hammerjs/hammer';
 
+//import 'materialize-css/dist/js/materialize.min.js';
+
+import { MaterialModule } from '@angular/material';
+import {CalendarModule} from 'primeng/primeng';
+
 import { AppComponent } from './app.component';
 import { MainModule } from './../main/main.module';
-
-import {CalendarModule} from 'primeng/primeng';
-import { MaterialModule } from '@angular/material';
 
 @NgModule({
   declarations: [

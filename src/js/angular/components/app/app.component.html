@@ -1,5 +1,11 @@
+<header></header>
 <nav></nav>
+<section>
+</section>
+<footer></footer>
+
 <p-calendar [(ngModel)]="value"></p-calendar>
+<md-sidenav-container [class.m2app-dark]="isDarkTheme">
   <md-sidenav #sidenav mode="side" class="app-sidenav">
     Sidenav
   </md-sidenav>
@@ -38,6 +44,7 @@
     </md-card>
 
     <md-card class="app-input-section">
+      
     </md-card>
 
     <md-card>
@@ -108,6 +115,8 @@
     </md-card>
 
   </div>
+
+</md-sidenav-container>
 
 <span class="app-action" [class.m2app-dark]="isDarkTheme">
   <button md-fab><md-icon>check circle</md-icon></button>
