@@ -3,8 +3,6 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
-import 'hammerjs/hammer';
-
 import { MaterialModule } from '@angular/material';
 import {CalendarModule} from 'primeng/primeng';
 
