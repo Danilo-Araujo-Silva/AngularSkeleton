@@ -4,24 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { MaterialModule } from '@angular/material';
-import {CalendarModule} from 'primeng/primeng';
 
-import { AppComponent } from './app.component';
-import { MainModule } from './../main/main.module';
+import { RoutingModule } from './routing.module';
+
+import { PublicComponent } from './../public/public.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    MainModule.forRoot(),
-    CalendarModule
+    RoutingModule
+  ],
+  declarations: [
+    PublicComponent
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [PublicComponent]
 })
-export class AppModule { }
+export class BoostrapModule {
+
+}

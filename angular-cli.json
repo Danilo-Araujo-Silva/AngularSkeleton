@@ -18,9 +18,9 @@
         "robots.txt"
       ],
       "index": "index.html",
-      "main": "js/angular/main.ts",
-      "polyfills": "js/angular/configuration/polyfills.ts",
-      "test": "js/angular/test.ts",
+      "main": "js/main/angular/bootstrap.ts",
+      "polyfills": "js/main/model/configuration/polyfill/polyfills.ts",
+      "test": "js/test/angular/boostrap.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "js",
       "styles": [
@@ -38,9 +38,10 @@
         "vendor/primeng/layout/js/ripple.js"
       ],
       "environments": {
-        "source": "js/environments/default.ts",
-        "dev": "js/environments/default.ts",
-        "prod": "js/environments/prod.ts"
+        "source": "js/main/model/configuration/environment/dev.ts",
+        "dev": "js/main/model/configuration/environment/dev.ts",
+        "hmg": "js/main/model/configuration/environment/hmg.ts",
+        "prod": "js/main/model/configuration/environment/prd.ts"
       }
     }
   ],
