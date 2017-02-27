@@ -5,9 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { MaterialModule } from '@angular/material';
 
-import { RoutingModule } from './routing.module';
+import { BootstrapRoutingModule } from './bootstrap-routing.module';
+import { BootstrapComponent } from './bootstrap.component';
 
-import { PublicComponent } from './../public/public.component';
+import { PublicModule } from './../public/public.module';
+
 
 @NgModule({
   imports: [
@@ -15,14 +17,17 @@ import { PublicComponent } from './../public/public.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    RoutingModule
+    BootstrapRoutingModule,
+		PublicModule
   ],
   declarations: [
-    PublicComponent
+  	BootstrapComponent
   ],
-  providers: [],
-  bootstrap: [PublicComponent]
+  providers: [
+  ],
+	bootstrap: [
+		BootstrapComponent
+	]
 })
 export class BoostrapModule {
-
 }

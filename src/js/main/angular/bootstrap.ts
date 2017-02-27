@@ -5,7 +5,7 @@ import { enableProdMode } from '@angular/core';
 import { BoostrapModule } from './component/bootstrap/bootstrap.module';
 
 if (environment.production) {
-  enableProdMode();
+	enableProdMode();
 }
 
 platformBrowserDynamic().bootstrapModule(BoostrapModule);
