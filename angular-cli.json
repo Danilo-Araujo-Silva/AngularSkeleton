@@ -17,7 +17,7 @@
         "humans.txt",
         "robots.txt"
       ],
-      "index": "index.html",
+      "index": "html/index.html",
       "main": "js/main/angular/bootstrap.ts",
       "polyfills": "js/main/model/configuration/polyfill/polyfills.ts",
       "test": "js/test/angular/boostrap.ts",
